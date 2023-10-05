@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import AdSense from "../components/AdSense";
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -48,6 +49,8 @@ export default function Home() {
         <title>Dream Avatar</title>
       </Head>
 
+      <AdSense adSlot={2281016195} />
+
       <h1 className="py-6 text-center font-bold text-2xl">
         Generate Your Dream Avatar
       </h1>
@@ -81,6 +84,7 @@ export default function Home() {
           <p className="py-3 text-sm opacity-50">status: {prediction.status}</p>
         </>
       )}
+      <AdSense adSlot={5359687249} />
     </div>
   );
 }
