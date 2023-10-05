@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { ResponsiveAdUnit } from "nextjs-google-adsense";
@@ -43,13 +43,20 @@ export default function Home() {
     }
   };
 
+  useEffect(() => {
+    var ads = document.getElementsByClassName("adsbygoogle").length;
+    for (var i = 0; i < ads; i++) {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {}
+    }
+  }, []);
+
   return (
     <div className="container max-w-2xl mx-auto p-5">
       <Head>
         <title>Dream Avatar</title>
       </Head>
-      <ResponsiveAdUnit slotId="2281016195" type="top-home" />
-
       <h1 className="py-6 text-center font-bold text-2xl">
         Generate Your Dream Avatar
       </h1>
@@ -83,8 +90,6 @@ export default function Home() {
           <p className="py-3 text-sm opacity-50">status: {prediction.status}</p>
         </>
       )}
-      <div className="pb-4" />
-      <ResponsiveAdUnit slotId="5359687249" type="bottom-home" />
     </div>
   );
 }
