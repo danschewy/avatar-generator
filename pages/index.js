@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import AdSense from "../components/AdSense";
+import { ResponsiveAdUnit } from "nextjs-google-adsense";
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -48,8 +48,7 @@ export default function Home() {
       <Head>
         <title>Dream Avatar</title>
       </Head>
-
-      <AdSense adSlot={2281016195} />
+      <ResponsiveAdUnit slotId="2281016195" type="top-home" />
 
       <h1 className="py-6 text-center font-bold text-2xl">
         Generate Your Dream Avatar
@@ -84,7 +83,8 @@ export default function Home() {
           <p className="py-3 text-sm opacity-50">status: {prediction.status}</p>
         </>
       )}
-      <AdSense adSlot={5359687249} />
+      <div className="pb-4" />
+      <ResponsiveAdUnit slotId="5359687249" type="bottom-home" />
     </div>
   );
 }
