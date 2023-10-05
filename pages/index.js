@@ -48,7 +48,7 @@ export default function Home() {
       <Head>
         <title>Dream Avatar</title>
       </Head>
-      <ResponsiveAdUnit type="top-home" />
+      <ResponsiveAdUnit slotId="2281016195" type="top-home" />
 
       <h1 className="py-6 text-center font-bold text-2xl">
         Generate Your Dream Avatar
@@ -84,7 +84,7 @@ export default function Home() {
         </>
       )}
       <div className="pb-4" />
-      <ResponsiveAdUnit type="bottom-home" />
+      <ResponsiveAdUnit slotId="5359687249" type="bottom-home" />
     </div>
   );
 }
