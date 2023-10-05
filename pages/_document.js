@@ -4,13 +4,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3998650725257627"
-            crossorigin="anonymous"
-          ></script>
-        </Head>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />
