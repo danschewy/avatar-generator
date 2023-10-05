@@ -1,15 +1,9 @@
 import { useEffect } from "react";
 
 const AdSense = ({ adSlot }) => {
-  useEffect(() => {
-    if (window) {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    }
-  }, []);
-
   return (
     <ins
-      className="adsbygoogle p-4"
+      className="adsbygoogle"
       style={{ display: "block" }}
       data-ad-client="ca-pub-3998650725257627" // Replace with your publisher ID
       data-ad-slot={adSlot}

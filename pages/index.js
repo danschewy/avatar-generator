@@ -44,49 +44,47 @@ export default function Home() {
   };
 
   return (
-    <div className="h-screen flex flex-row justify-center">
+    <div className="container max-w-2xl mx-auto p-5">
       <Head>
         <title>Dream Avatar</title>
       </Head>
-      <AdSense adSlot={7637284651} />
 
-      <div className="container flex h-full max-w-2xl flex-col items-center p-5">
-        <AdSense adSlot={2281016195} />
-        <h1 className="py-6 text-center font-bold text-2xl">
-          Generate Your Dream Avatar
-        </h1>
-        <form className="w-full flex" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            className="flex-grow"
-            name="prompt"
-            placeholder="Try something like 'A husky dog police officer.'"
-          />
-          <button className="button" type="submit">
-            Go!
-          </button>
-        </form>
-        {error && <div>{error}</div>}
-        {prediction && (
-          <>
-            {prediction.output && (
-              <div className="image-wrapper mt-5">
-                <Image
-                  fill
-                  src={prediction.output[prediction.output.length - 1]}
-                  alt="output"
-                  sizes="100vw"
-                />
-              </div>
-            )}
-            <p className="py-3 text-sm opacity-50">
-              status: {prediction.status}
-            </p>
-          </>
-        )}
-        <AdSense adSlot={5359687249} />
-      </div>
-      <AdSense adSlot={7062569589} />
+      <AdSense adSlot={2281016195} />
+
+      <h1 className="py-6 text-center font-bold text-2xl">
+        Generate Your Dream Avatar
+      </h1>
+
+      <form className="w-full flex" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          className="flex-grow"
+          name="prompt"
+          placeholder="Try something like 'A husky dog police officer.'"
+        />
+        <button className="button" type="submit">
+          Go!
+        </button>
+      </form>
+
+      {error && <div>{error}</div>}
+
+      {prediction && (
+        <>
+          {prediction.output && (
+            <div className="image-wrapper mt-5">
+              <Image
+                fill
+                src={prediction.output[prediction.output.length - 1]}
+                alt="output"
+                sizes="100vw"
+              />
+            </div>
+          )}
+          <p className="py-3 text-sm opacity-50">status: {prediction.status}</p>
+        </>
+      )}
+      <AdSense adSlot={5359687249} />
     </div>
   );
 }
