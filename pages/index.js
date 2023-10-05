@@ -45,14 +45,11 @@ export default function Home() {
   return (
     <div className="container max-w-2xl mx-auto p-5">
       <Head>
-        <title>Replicate + Next.js</title>
+        <title>Dream Avatar</title>
       </Head>
 
       <h1 className="py-6 text-center font-bold text-2xl">
-        Dream something with{" "}
-        <a href="https://replicate.com/stability-ai/sdxl?utm_source=project&utm_project=getting-started">
-          SDXL
-        </a>
+        Generate Your Dream Avatar
       </h1>
 
       <form className="w-full flex" onSubmit={handleSubmit}>
@@ -60,7 +57,7 @@ export default function Home() {
           type="text"
           className="flex-grow"
           name="prompt"
-          placeholder="Enter a prompt to display an image"
+          placeholder="Try something like 'A husky dog police officer.'"
         />
         <button className="button" type="submit">
           Go!
