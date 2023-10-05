@@ -49,7 +49,7 @@ export default function Home() {
         <title>Dream Avatar</title>
       </Head>
 
-      <AdSense adSlot={2281016195} />
+      <AdSense adSlot={2281016195} suppressHydrationWarning />
 
       <h1 className="py-6 text-center font-bold text-2xl">
         Generate Your Dream Avatar
@@ -84,7 +84,7 @@ export default function Home() {
           <p className="py-3 text-sm opacity-50">status: {prediction.status}</p>
         </>
       )}
-      <AdSense adSlot={5359687249} />
+      <AdSense adSlot={5359687249} suppressHydrationWarning />
     </div>
   );
 }
