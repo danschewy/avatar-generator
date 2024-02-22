@@ -14,10 +14,17 @@ export default async function handler(req, res) {
   const prediction = await replicate.predictions.create({
     // Pinned to a specific version of Stable Diffusion
     // See https://replicate.com/stability-ai/sdxl
-    version: "f0f8a1578f4e57da2090b1846a3c026bd75d38abd969e1d4788b07f203966294",
+    version: "ba5ab694a9df055fa469e55eeab162cc288039da0abd8b19d956980cc3b49f6d",
 
     // This is the text prompt that will be submitted by a form on the frontend
-    input: { prompt: req.body.prompt },
+    input: {
+      image: req.body.dad,
+      steps: 25,
+      width: 512,
+      gender: req.body.gender,
+      height: 728,
+      image2: req.body.mom,
+    },
   });
 
   if (prediction?.error) {

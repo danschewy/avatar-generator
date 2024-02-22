@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  transpilePackages: ["ahooks"],
   reactStrictMode: true,
   images: {
     remotePatterns: [
